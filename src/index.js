@@ -101,8 +101,10 @@ function toggleDog(e){
         targetSpan[0].dataset.goodBoy = 'true'
         } else {
             e.target.innerText = 'Bad Dog!'
-            
             targetSpan[0].dataset.goodBoy = 'false'
+            if (document.querySelector('#good-dog-filter').innerText === "Filter good dogs: ON") {
+                targetSpan[0].remove()
+            }
         }
     })
     
